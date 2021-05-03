@@ -1,0 +1,77 @@
+plugins {
+  id 'com.android.application'
+  id 'kotlin-android'
+  id 'kotlin-kapt'
+  id 'androidx.navigation.safeargs.kotlin'
+}
+
+android {
+  compileSdkVersion 30
+  buildToolsVersion "30.0.2"
+
+  defaultConfig {
+    applicationId "com.teddy.brunch"
+    minSdkVersion 21
+    targetSdkVersion 30
+    versionCode 1
+    versionName "1.0"
+
+    testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+  }
+
+  buildTypes {
+    release {
+      minifyEnabled false
+      proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+    }
+  }
+
+  flavorDimensions "sandbox"
+  productFlavors {
+    development {
+      dimension "sandbox"
+
+    }
+    production {
+      dimension "sandbox"
+    }
+  }
+
+  compileOptions {
+    sourceCompatibility JavaVersion.VERSION_1_8
+    targetCompatibility JavaVersion.VERSION_1_8
+  }
+  kotlinOptions {
+    jvmTarget = '1.8'
+  }
+  dataBinding {
+    enabled = true
+    enabledForTests = true
+  }
+}
+
+dependencies {
+  implementation project(":business")
+  implementation project(":binder")
+  implementation mainLibs.kotlin_lib
+  implementation mainLibs.core_ktx
+  implementation mainLibs.appcompat
+  implementation mainLibs.android_material
+  implementation mainLibs.constraintlayout
+  implementation mainLibs.navigation_fragment
+  implementation mainLibs.navigation_ui
+  implementation mainLibs.koin_scope
+  implementation mainLibs.koin_viewmodel
+  implementation mainLibs.coil
+  implementation mainLibs.coroutines_core
+  implementation mainLibs.coroutines_android
+  implementation mainLibs.retrofit
+  implementation mainLibs.images_slider
+  implementation 'androidx.legacy:legacy-support-v4:1.0.0'
+
+  testImplementation testLibs.junit
+  testImplementation testLibs.core_testing
+  testImplementation testLibs.mockito_core
+  testImplementation testLibs.mockito_kotlin
+  testImplementation testLibs.coroutines_test
+}

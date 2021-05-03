@@ -1,0 +1,6 @@
+include ':binder'
+include ':datasource'
+include ':common'
+include ':business'
+include ':app'
+rootProject.name = "Brunch"

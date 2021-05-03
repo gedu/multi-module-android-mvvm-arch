@@ -1,0 +1,65 @@
+// Top-level build file where you can add configuration options common to all sub-projects/modules.
+buildscript {
+    ext.kotlin_version = "1.3.72"
+    ext {
+        versions = [
+                navigation_version: '2.3.5',
+                koin_version      : '2.2.2',
+                lifecycle_version : '2.3.0',
+                coroutine_version : '1.3.9',
+                okhttp3_version   : '4.2.2'
+        ]
+        mainLibs = [
+                kotlin_lib          : "org.jetbrains.kotlin:kotlin-stdlib:${kotlin_version}",
+                core_ktx            : 'androidx.core:core-ktx:1.3.2',
+                appcompat           : 'androidx.appcompat:appcompat:1.2.0',
+                android_material    : 'com.google.android.material:material:1.3.0',
+                constraintlayout    : 'androidx.constraintlayout:constraintlayout:2.0.4',
+                navigation_fragment : "androidx.navigation:navigation-fragment-ktx:${versions.navigation_version}",
+                navigation_ui       : "androidx.navigation:navigation-ui-ktx:${versions.navigation_version}",
+                koin_scope          : "org.koin:koin-androidx-scope:${versions.koin_version}",
+                koin_viewmodel      : "org.koin:koin-androidx-viewmodel:${versions.koin_version}",
+                lifecycle_viewmodel : "androidx.lifecycle:lifecycle-viewmodel-ktx:${versions.lifecycle_version}",
+                lifecycle_livedata  : "androidx.lifecycle:lifecycle-livedata-ktx:${versions.lifecycle_version}",
+                lifecycle_extensions: "androidx.lifecycle:lifecycle-extensions:${versions.lifecycle_version}",
+                coroutines_core     : "org.jetbrains.kotlinx:kotlinx-coroutines-core:${versions.coroutine_version}",
+                coroutines_android  : "org.jetbrains.kotlinx:kotlinx-coroutines-android:${versions.coroutine_version}",
+                retrofit            : "com.squareup.retrofit2:retrofit:2.7.2",
+                okhttp              : "com.squareup.okhttp3:okhttp:${versions.okhttp3_version}",
+                logging_interceptor : "com.squareup.okhttp3:logging-interceptor:${versions.okhttp3_version}",
+                converter_gson      : "com.squareup.retrofit2:converter-gson:2.3.0",
+                coil                : "io.coil-kt:coil:1.2.0",
+                images_slider       : "com.github.smarteist:autoimageslider:1.4.0"
+        ]
+        testLibs = [
+                junit          : 'junit:junit:4.13.2',
+                core_testing   : "androidx.arch.core:core-testing:2.1.0",
+                koin_test      : "org.koin:koin-test:${versions.koin_version}",
+                coroutines_test: "org.jetbrains.kotlinx:kotlinx-coroutines-test:${versions.coroutine_version}",
+                mockito_core   : "org.mockito:mockito-core:3.6.0",
+                mockito_kotlin : "org.mockito.kotlin:mockito-kotlin:3.1.0"
+        ]
+    }
+    repositories {
+        google()
+        jcenter()
+    }
+    dependencies {
+        classpath "com.android.tools.build:gradle:4.1.1"
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
+        classpath "androidx.navigation:navigation-safe-args-gradle-plugin:${versions.navigation_version}"
+        // NOTE: Do not place your application dependencies here; they belong
+        // in the individual module build.gradle files
+    }
+}
+
+allprojects {
+    repositories {
+        google()
+        jcenter()
+    }
+}
+
+task clean(type: Delete) {
+    delete rootProject.buildDir
+}

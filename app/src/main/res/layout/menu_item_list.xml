@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="menuPrice"
+            type="com.teddy.common.model.BasicMenu" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="16dp"
+        android:orientation="horizontal">
+
+        <TextView
+            style="@style/BodySmall"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            android:layout_weight="1"
+            android:paddingVertical="8dp"
+            android:text="@{menuPrice.name}"
+            tools:text="This is a great menu itemThis is a great menu itemThis is a great menu itemThis is a great menu itemThis is a great menu itemThis is a great menu item" />
+
+        <TextView
+            style="@style/Heading16"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@{menuPrice.price != null ? `$` + menuPrice.price.toString() : ``}"
+            tools:text="$9" />
+
+    </LinearLayout>
+</layout>

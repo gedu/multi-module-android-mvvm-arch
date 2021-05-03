@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--HEADINGS-->
+    <dimen name="h1_45">45sp</dimen>
+    <dimen name="h1">24sp</dimen>
+    <dimen name="h2">20sp</dimen>
+    <dimen name="h3">18sp</dimen>
+    <dimen name="h4">16sp</dimen>
+
+    <!--BODY-->
+    <dimen name="body_xl">32sp</dimen>
+    <dimen name="body_l">24sp</dimen>
+    <dimen name="body_m">16sp</dimen>
+    <dimen name="body_s">14sp</dimen>
+    <dimen name="body_xs">10sp</dimen>
+
+
+    <dimen name="main_logo_size">80dp</dimen>
+    <dimen name="main_logo_margin_top">72dp</dimen>
+    <dimen name="bar_corner_radius">15dp</dimen>
+    <dimen name="button_corner_radius">10dp</dimen>
+    <dimen name="restaurant_details_header_height">256dp</dimen>
+    <dimen name="rating_bubble_size">14dp</dimen>
+</resources>

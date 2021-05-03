@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:bind="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="ratingsDetails"
+            type="com.teddy.common.model.Restaurant" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="vertical"
+        tools:showIn="@layout/fragment_restaurant_details">
+
+        <TextView
+            style="@style/Heading16"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingHorizontal="16dp"
+            android:paddingBottom="16dp"
+            android:text="@string/raitings_reviews" />
+
+        <include
+            layout="@layout/rate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="32dp"
+            bind:rateDetails="@{ratingsDetails}" />
+
+        <TextView
+            style="@style/CurvyBodyLarge"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@{`Table ` + ratingsDetails.rateDistinction}"
+            tools:text="Table Excellent" />
+
+        <TextView
+            style="@style/BodyXSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="@{`Based on ` + ratingsDetails.rateCount + ` ratings`}"
+            tools:text="Based on 45 ratings" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="16dp" />
+
+        <com.google.android.material.button.MaterialButton
+            style="@style/Widget.AppCompat.Button.Borderless.Colored"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingVertical="16dp"
+            android:text="@string/read_all_reviews"
+            android:textColor="@color/green_500" />
+
+        <com.google.android.material.button.MaterialButton
+            style="@style/Widget.AppCompat.Button.Borderless.Colored"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="16dp"
+            android:background="@drawable/border_box"
+            android:text="@string/write_a_review"
+            android:textColor="@color/black" />
+    </LinearLayout>
+</layout>

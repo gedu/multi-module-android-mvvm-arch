@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <merge
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        tools:parentTag="LinearLayout">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:layout_width="@dimen/rating_bubble_size"
+            android:layout_height="@dimen/rating_bubble_size"
+            app:srcCompat="@drawable/ic_bubble_empty" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:layout_width="@dimen/rating_bubble_size"
+            android:layout_height="@dimen/rating_bubble_size"
+            app:srcCompat="@drawable/ic_bubble_empty" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:layout_width="@dimen/rating_bubble_size"
+            android:layout_height="@dimen/rating_bubble_size"
+            app:srcCompat="@drawable/ic_bubble_empty" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:layout_width="@dimen/rating_bubble_size"
+            android:layout_height="@dimen/rating_bubble_size"
+            app:srcCompat="@drawable/ic_bubble_empty" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:layout_width="@dimen/rating_bubble_size"
+            android:layout_height="@dimen/rating_bubble_size"
+            app:srcCompat="@drawable/ic_bubble_empty" />
+
+    </merge>
+</layout>

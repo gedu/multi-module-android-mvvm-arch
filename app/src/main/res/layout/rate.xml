@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="rateDetails"
+            type="com.teddy.common.model.Restaurant" />
+    </data>
+
+    <LinearLayout
+        android:id="@+id/rate_container"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:showIn="@layout/restaurant_details_header_info">
+
+        <TextView
+            android:id="@+id/tv_rate"
+            style="@style/Heading24"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@{rateDetails.avgRate != null ? rateDetails.avgRate.toString() : `-`}"
+            tools:text="8,8" />
+
+        <TextView
+            style="@style/BodySmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/slash_ten" />
+    </LinearLayout>
+</layout>
