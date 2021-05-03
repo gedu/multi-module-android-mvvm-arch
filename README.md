@@ -1,6 +1,6 @@
 # Brunch
 
-It is an example app using some open public APIs provided for an interview test.
+It is an example app using an open public APIs provided for an interview test.
 I used multi-modules architecture, dividing View, Business and Sources.
 It still has some improvements to add, like gradle dependencies handling. Will be good
 to review some of the dependencies and change `implementation` to `api`.
@@ -25,28 +25,8 @@ manipulate and transform the flow.
 I just used a simple cache source to keep the whole object so I don't have to move it through
 the whole app. If not I would need to implement a local DB, but for a demo app this works.
 
-##Provided API
-Was kind of hard to map the fields from the JSON to the given design. I tried to add as much
-I could. Also, I came up with a mapping to show the menu items, it isn't the best way to send
-items from a menu with its price. 
-(I used a JSON-Class generator so if you see some weird Long/Double is because of that, I changed
-some to Float).
-I used 3 different ids, 2 of which have different data and null fields and one throws an error. My
-approach was to load the 2 working ids without the failing id breaking the list fetching.
-
 ##Test
-Made some basic tests, I didn't cover all the cases because of time constraints. I created
-a Factory data provider so I know it the tests work no matter the values I use, again will
-be good to add more asserts and test cases. I think the ones I did are the basic ones and show
-how I would build them, making sure the logic works.
-I just went the unit test path, because adding Integration testing with Robolectric or
-end-to-end testing would have taken more time than the expected.
+Made some basic tests, I didn't cover all the cases. I created
+a Factory data provider so I know if the tests work no matter the values I use, again will
+be good to add more asserts and test cases.
 
-##Feelings
-I like the final state of the code and the app. Made some really small changes on just the components I
-used (like images with white background) so it doesn't looks ugly.
-Gave a final look at the code and I think looks clean, and I get what is happening with just
-reading it.
-I was able to refresh on some forgotten components and improve on others that I already use.
-I will be more than happy to receive feedback on ways I can improve my code,
-architecture or how would you approach a particular feature, section, etc. 
