@@ -30,3 +30,6 @@ Made some basic tests, I didn't cover all the cases. I created
 a Factory data provider so I know if the tests work no matter the values I use, again will
 be good to add more asserts and test cases.
 
+<img width="416" alt="home" src="https://user-images.githubusercontent.com/1676818/116868692-9cb68580-abe5-11eb-8fd8-af974b136e09.png">
+<img width="418" alt="details_1" src="https://user-images.githubusercontent.com/1676818/116868700-9f18df80-abe5-11eb-912a-83201d5a6b32.png">
+<img width="418" alt="details_2" src="https://user-images.githubusercontent.com/1676818/116868702-a0e2a300-abe5-11eb-85e5-0ba2b1ffc9db.png">
